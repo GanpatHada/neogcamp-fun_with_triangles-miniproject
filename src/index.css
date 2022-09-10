@@ -1,13 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=El+Messiri&family=Josefin+Sans:wght@200;400&family=Lobster&family=Roboto&family=Ubuntu:wght@300&family=Varela+Round&family=Zen+Loop&display=swap');
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  background-color: #0c0c0c;
 
+}
+*{
+  
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+body::-webkit-scrollbar{
+  display: none;
+}
+h3{
+  color:#d1f541;
+}
+ul{
+  display: flex;
+  list-style: none;
+}
+li{
+  text-decoration: none;
+  padding: 10px 0px;
+  color:  darkgray;
+  transition: 0.3s ease-out;
+  border-radius: 7px;
+  cursor: pointer;
+  margin:0px 15px ;
+ 
+  
+}
+header{
+  color: white;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 30px;
+  background:#d1f541;
+  padding-left: 30px;
+  background:#6bd606;
+  font-size: 1em;
+  font-family: 'Aclonica';
+  
+}
+header h2{
+  font-family: 'Aclonica';
+  font-size: 30px;
+  color: white;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  width: 100vw;
+  height: 60px;
+  position: sticky;
+  top: 0px;
+  overflow-x: auto;
+  padding-left: 10px;
+  font-family: 'Comfortaa', cursive;
+  
+}
+nav::-webkit-scrollbar{
+  display: none;
+}
+main{
+  background-color:#0c0c0c;
+  min-height: calc(100vh - 180px);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+}
+.find{
+  height: 400px;
+  max-width: 400px;
+  margin: auto;
+  background-color: transparent;
+  width: 90vw;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  
+}
+.find > input[type=number],input[type=submit]{
+  height: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(204, 204, 204);
+}
+.btn{
+  margin: 20px 0px;
+  background-color:#6bd606;
+  cursor: pointer;
+  transition: 0.2s;
+  color: WHITE;
+  height: 40px;
+  width: 100px;
+  border: none;
+  margin-bottom: 20px;
+  transition: 0.2s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn:hover{
+  background-color: #50a104;
+}
+.find > input[type=submit]:hover{
+  
+  background-color:#50a104;
+
+}
+.find > input[type=number]:focus{
+  
+ outline: none;
+}
+.find h2{
+  color: darkgray;
+  margin-bottom: 20px;
+}
+
+label{
+  color:  rgb(173, 173, 173); ;
+  
+}
+form div{
+  text-align: start;
+  margin: 10px 0px;
+}
+.question{
+  color: rgb(173, 173, 173);
+  margin:30px 0px;
+  text-align: start;
+}
+input[type=radio]
+{
+  accent-color: #6bd606;
+  margin-top: 20px;
+  cursor:pointer;
+  
+}
+input[type=radio] label{
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+input[type=reset]
+{
+  background-color: red;
+  color: white;
+  margin-right: 10px;
+}
+input[type=reset]:hover
+{
+  background-color: rgb(179, 1, 1);
+  color: white;
+}
+input[type=submit]:hover
+{
+  background-color: rgb(0, 68, 0);
+  color: white;
+}
+input[type=submit]
+{
+  background-color: green;
+  color: white;
+}
+#control{
+  display: flex;
+  align-items: center;
+}
+
+#prev{
+  background-color: gray;
+  color: white;
+}
+#next{
+  background-color: rgb(9, 105, 230);
+  color: white;
+}
+#submit{
+  background-color: rgb(11, 199, 27);
+  color: white;
+}
+#quizques{
+  /* background-color: pink; */
+  width: calc(100vw - 40px);
+  margin: auto;
+  background-color: #2020208a;
+  margin: 20px;
+  margin-top: 0px;
+  padding-left: 20px;
+  padding-bottom: 30px;
+  border-radius: 5px;
+}
+#control{
+  width: 600px;
+  height: 100px;
+  
+}
+.questions{
+  text-align: start;
+  text-align: start;
+  background-color: #2424248c;
+  width: calc(100vw - 40px);
+  margin: auto;
+  padding: 20px;
+  padding-bottom: 30px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+ 
+}
+.questions p{
+  margin: 10px 0px;
+  font-family:Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+.questions p ,label{
+  color: darkgray;
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 1px;
+}
+
+footer{
+  background:black;
+  padding: 15px;
+  text-align: center;
+  color:#d1f541;
+  width: 100vw;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+.active{
+  border-bottom: 2px solid #6bd606;
+  border-radius: 0px;
+}
+.navlinks:hover{
+  color: whitesmoke;
+  
+}
+.navlinks{
+  color: darkgray;
+  text-decoration: none;
+  height: 58px;
+  display: flex;
+  align-items: center;
+  padding: 0px 5px;
+  justify-content: center;
+  transition: 0.2s ease-out color;
+}
+/* .active:hover{
+  color: black;
+} */
+

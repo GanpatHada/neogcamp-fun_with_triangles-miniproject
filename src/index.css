@@ -243,10 +243,15 @@ footer{
   background:black;
   padding: 15px;
   text-align: center;
-  color:#d1f541;
+  color:grey;
   width: 100vw;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   
+}
+i{
+  color: grey;
+  font-size: 24px;
+  margin: 15px 8px;
 }
 .active{
   border-bottom: 2px solid #6bd606;

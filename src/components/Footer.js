@@ -3,7 +3,12 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer>
-        &copy; copyright 2022 | Ganpat Hada | Fun with triangles
+         <p>&copy; copyright 2022 | Ganpat Hada | Birthday Lucky</p>
+         <span>
+           <a href="https://www.linkedin.com/in/ganpat-hada-33abb4227/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+           <a href="https://github.com/GanpatHada" target="_blank"><i class="fa-brands fa-github"></i></a>
+           <a href="" target="_blank"><i className="fa-brands fa-twitter"></i></a>
+        </span>
     </footer>
   )
 }

@@ -90,12 +90,14 @@ main{
   height: 400px;
   max-width: 400px;
   margin: auto;
-  background-color: transparent;
+  background-color: #2424248c;
   width: 90vw;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  padding: 10px;
+  padding: 20px;
+  /* border: 2px solid #58585856; */
+  border-radius: 8px;
   
 }
 .find > input[type=number],input[type=submit]{
@@ -133,7 +135,7 @@ main{
 }
 .find h2{
   color: darkgray;
-  margin-bottom: 20px;
+  margin:20px 10px;
 }
 
 label{

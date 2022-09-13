@@ -11,3 +11,5 @@ export const ques = [
 { ques: "How many vertices does a triangle have?", answer: ["1", "2", "3", "4"] },
 ]
 export const answerlist=["right angled","60 deg","60 deg","3 cm, 4 cm, 5 cm","A triangle can have two acute angles","3","equilateral","isosceles","3","3"];
+
+export const youranswers=[];

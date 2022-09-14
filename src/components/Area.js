@@ -15,7 +15,7 @@ const Area = () => {
     ){
      const s=((angle1+angle2+angle3)/2).toFixed(2);
      const area=Math.sqrt(s*((s-angle1)*(s-angle2)*(s-angle3))).toFixed(2);
-     setresult(`Area of Triangle = ${area}`); 
+     setresult(`Area of Triangle = ${area} sq. unit `); 
      setrescolor("lightgreen")
     }
     else{
@@ -30,7 +30,8 @@ const Area = () => {
       <input type="number" onChange={(event)=>{setangle2(Number(event.target.value))}} placeholder='Enter lenght of second side' id="angle2" />
       <input type="number" onChange={(event)=>{setangle3(Number(event.target.value))}} placeholder='Enter lenght of third side' id="angle3" />
       <button className='btn' style={{width:"100%"}} onClick={calculateArea}>CALCULATE AREA</button>
-      <p style={{color:rescolor,marginBottom:"20px"}}>{result}</p>
+      <span style={{color:rescolor,marginBottom:"20px"}}>{result}</span>
+      
     </div>
   )
 }

@@ -27,7 +27,8 @@ const Angle = () => {
       <input type="number" onChange={(event)=>{setangle2(Number(event.target.value))}} placeholder='Enter angle 2' id="angle2" />
       <input type="number" onChange={(event)=>{setangle3(Number(event.target.value))}} placeholder='Enter angle 3' id="angle3" />
       <button className='btn' style={{width:"100%"}} onClick={checkTriangle}>CHECK</button>
-      <p style={{color:rescolor,marginBottom:"20px"}}>{result}</p>
+      <span style={{color:rescolor,marginBottom:"20px"}}>{result}</span>
+      
     </div>
   )
 }

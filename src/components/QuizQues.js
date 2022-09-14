@@ -4,14 +4,14 @@ import { answerlist } from './QuizMaterials'
 import { youranswers } from './QuizMaterials'
 const QuizQues = () => {
     const answers=new Array(10).fill(null);
-    const [border, setborder] = useState(false)
+    const[border, setborder] = useState(false)
     const[result,setresult]=useState('');
     const[color,setcolor]=useState('');
     const[btnstate,setbtnstate]=useState('block');
     const getAnswers=(e)=>{
         e.preventDefault();
         let count=0;
-        for(let i=0;i<10;i++)
+        for(let i=0;i<answerlist.length;i++)
         {
             if(answerlist[i]===answers[i])
               {   youranswers.push(i+1);
@@ -25,7 +25,7 @@ const QuizQues = () => {
         setbtnstate('none');
         if(count<3)
            setcolor("crimson");
-        else setcolor("green");
+        else setcolor("#6bd606");
         setborder(true);     
          
     }
@@ -40,7 +40,7 @@ const QuizQues = () => {
             {ques.map((el, mainindex) => {
                 return (
 
-                    <div className="questions" style={{border:`${(border?`2px solid ${get(mainindex)}`:'none')}`}} key={mainindex}>
+                    <div className="questions" style={{border:`${(border?`1px solid ${get(mainindex)}`:'none')}` }} key={mainindex}>
                         
                         <p><span>{mainindex + 1}. </span>{el.ques}</p>
                         <form>
@@ -56,7 +56,10 @@ const QuizQues = () => {
                         )
                         }
                         </form>
-                        <p style={{color:"#6bd606",paddingTop:"20px",display:(get(mainindex)==="crimson"?'block':"none")}}>{(get(mainindex)==="crimson"&&border)&&`Correct option is "${answerlist[mainindex]}"`}</p>
+                        <p style={{color:"#6bd606",paddingTop:"20px",display:(get(mainindex)==="crimson"?'block':"none")}}>{(get(mainindex)==="crimson"&&border)&&`Correct answer is "${answerlist[mainindex]}"`}</p>
+                        <div style={{display:`${(border?'block':'none')}`}} id="wrapper">
+
+                        </div>
                     </div>
                     
                 )
@@ -65,10 +68,13 @@ const QuizQues = () => {
             }
         </div>
         <div>
-           <button className='btn' style={{display:btnstate}} onClick={getAnswers}>submit</button>
+           <button className='btn' style={{display:btnstate}} onClick={getAnswers}>SUBMIT</button>
         </div>
         <div style={{display:"flex"}}>
             <p style={{color,fontWeight:"bold"}}>{`${result}`}</p>&nbsp;
+            {
+                border&&<span><a id="retake" href="/">Retake Test</a></span>
+            }
         </div>
       </>
     )

@@ -71,7 +71,19 @@ nav{
   overflow-x: auto;
   padding-left: 10px;
   font-family: 'Comfortaa', cursive;
+  z-index: 1;
   
+}
+#wrapper{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  cursor: text;
 }
 nav::-webkit-scrollbar{
   display: none;
@@ -227,6 +239,9 @@ input[type=submit]
   padding-bottom: 30px;
   border-radius: 5px;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
  
 }
 .questions p{
@@ -261,6 +276,14 @@ i{
 .navlinks:hover{
   color: whitesmoke;
   
+}
+#retake{
+  color: gray;
+  text-decoration: none;
+}
+#retake:hover{
+  color: white;
+  text-decoration: underline;
 }
 .navlinks{
   color: darkgray;

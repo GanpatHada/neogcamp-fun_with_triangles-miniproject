@@ -6,6 +6,10 @@ const Area = () => {
   const [result, setresult] = useState("");
   const [rescolor, setrescolor] = useState("");
   const calculateArea=()=>{
+    if(side1===""||side2===""||side3===""){
+      setrescolor("red");
+      return setresult("Please fill all fields");
+    }
     if(side1===0||side2===0||side3===0){
       setrescolor("red");
       return setresult("length can't be zero");
@@ -23,7 +27,7 @@ const Area = () => {
      setrescolor("lightgreen")
     }
     else{
-      setresult("!Enter valid values");
+      setresult("sum of two sides must be greater then third side");
       setrescolor("red");
     }
   }

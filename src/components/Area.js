@@ -1,20 +1,24 @@
 import React, { useState } from 'react'
 const Area = () => {
-  const [angle1, setangle1] = useState("");
-  const [angle2, setangle2] = useState("");
-  const [angle3, setangle3] = useState("");
+  const [side1, setside1] = useState("");
+  const [side2, setside2] = useState("");
+  const [side3, setside3] = useState("");
   const [result, setresult] = useState("");
   const [rescolor, setrescolor] = useState("");
   const calculateArea=()=>{
-    if(angle1.length<1||angle2.length<1||angle3.length<1){
+    if(side1===0||side2===0||side3===0){
       setrescolor("red");
-      return setresult("please fill all fields");
-   }
+      return setresult("length can't be zero");
+    }
+    if(side1<0||side2<0||side3<0){
+      setrescolor("red");
+      return setresult("length can't be negative");
+    }
     if (
-      angle1 + angle2 > angle3 && angle2 + angle3 > angle1 && angle1 + angle3 > angle2  
+      side1 + side2 > side3 && side2 + side3 > side1 && side1 + side3 > side2  
     ){
-     const s=((angle1+angle2+angle3)/2).toFixed(2);
-     const area=Math.sqrt(s*((s-angle1)*(s-angle2)*(s-angle3))).toFixed(2);
+     const s=((side1+side2+side3)/2).toFixed(2);
+     const area=Math.sqrt(s*((s-side1)*(s-side2)*(s-side3))).toFixed(2);
      setresult(`Area of Triangle = ${area} sq. unit `); 
      setrescolor("lightgreen")
     }
@@ -26,9 +30,9 @@ const Area = () => {
   return (
     <div className='find'>
       <h2>Calculate Area of Triangle</h2>
-      <input type="number" onChange={(event)=>{setangle1(Number(event.target.value))}} placeholder='Enter length of first side' id="angle1" />
-      <input type="number" onChange={(event)=>{setangle2(Number(event.target.value))}} placeholder='Enter lenght of second side' id="angle2" />
-      <input type="number" onChange={(event)=>{setangle3(Number(event.target.value))}} placeholder='Enter lenght of third side' id="angle3" />
+      <input type="number" onChange={(event)=>{setside1(Number(event.target.value))}} placeholder='Enter length of first side' id="side1" />
+      <input type="number" onChange={(event)=>{setside2(Number(event.target.value))}} placeholder='Enter lenght of second side' id="side2" />
+      <input type="number" onChange={(event)=>{setside3(Number(event.target.value))}} placeholder='Enter lenght of third side' id="side3" />
       <button className='btn' style={{width:"100%"}} onClick={calculateArea}>CALCULATE AREA</button>
       <span style={{color:rescolor,marginBottom:"20px"}}>{result}</span>
       

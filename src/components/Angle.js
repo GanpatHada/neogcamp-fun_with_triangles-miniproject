@@ -6,9 +6,17 @@ const Angle = () => {
   const [result, setresult] = useState("");
   const [rescolor, setrescolor] = useState("");
   const checkTriangle=()=>{
-    if(angle1.length<1||angle2.length<1||angle3.length<1){
+    if(angle1===""||angle2===""||angle3===""){
+      setrescolor("red");
+      return setresult("Please fill all fields");
+   }
+    if(angle1===0||angle2===0||angle3===0){
+       setrescolor("red");
+       return setresult("angles can't be zero");
+    }
+     if(angle1<0||angle2<0||angle3<0){
         setrescolor("red");
-        return setresult("please fill all fields");
+        return setresult("angles can't be negative");
      }
      if(angle1+angle2+angle3===180)
      {
